@@ -1,0 +1,60 @@
+Slidify: Body Mass Index Calculator (Shinyapp)
+========================================================
+author: WeiQiang See
+date: 23rd July 2015
+
+So What exactly BMI is???
+========================================================
+
+The BMI shows the relation between a person's height and weight(the 2 variables),and the result yield will give you a gauge of how healthy your weight is.
+
+Equation for calculation
+========================================================
+
+
+$$BMI = \frac {W(kg)}{H(m)^2}$$
+where: 
+- BMI = Body Mass Index 
+- W = Weight in kilogram 
+- H = Height in metre 
+
+What does your BMI tell you???
+========================================================
+
+The following range are obtained from Health Promotion Board, Singapore
+
+BMI | Category
+-----------|--------------------------
+<18.5 |Underweight 
+18.5-22.9 |Healthy 
+23.0-27.4 |Overweight 
+>27.5 |Obese 
+
+R code
+================================================
+
+Here is implementation of BMI calculation and category
+
+
+
+```r
+Height <- 1.78; Weight <-63
+valuesbmi <- BMI(Weight, Height)
+valuesbmi
+```
+
+```
+## [1] 19.88
+```
+
+```r
+valuesstatus(valuesbmi)
+```
+
+```
+## [1] "Healthy"
+```
+Other Information
+================================================
+- Shinyapps: https://weiqiangsee.shinyapps.io/Developing-Data-Products
+- Github: https://github.com/weiqiangsee/Developing-Data-Products
